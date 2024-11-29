@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
 public class Register {
-    //This attribute can't be overridden.
+    // This attribute can't be overridden.
     final int registerAge = 18;
 
-    //Sensitive date is hidden from users (Encapsulation).
+    // Sensitive date is hidden from users (Encapsulation).
     private String name;
     private String lastName;
     private int age;
     private String password;
 
-    //Getter and Setter
+    // General attributes
+    String regex = "[a-zA-Z]{3,}";
+
+    // Getter and Setter
     public String getName() {
         return name;
     }
@@ -43,72 +46,73 @@ public class Register {
         this.password = userPassword;
     }
 
-    //Object
+    // Object
     Scanner scanner = new Scanner(System.in);
 
-    //Methods
+    // Methods
     public void register() {
-        System.out.println("\n\tRegister to see photos and videos from your friends\n");
-        //Firstname
-        System.out.println("Enter your name:");
-        String firstName = scanner.nextLine();
-        setName(firstName);
-        //Lastname
-        System.out.println("Enter your lastname:");
-        String LastName = scanner.nextLine();
-        setLastName(LastName);
-        //Age
-        System.out.println("Enter your age:");
-        int userAge = scanner.nextInt();
-        scanner.nextLine();
-        setAge(userAge);
-        //Password
-        System.out.println("Enter an alphanumeric password at least 6 characters:");
-        String userPassword = scanner.nextLine();
-        setPassword(userPassword);
 
-        System.out.println("");
+        System.out.println("\nRegister to see photos and videos from your friends\n");
 
-        if (!firstName.isEmpty()) {
-            System.out.println("Valid name");
-        } else {
-            System.out.println("You must insert your firstname");
-        }
-        if (!LastName.isEmpty()) {
-            System.out.println("Valid lastname");
-        } else {
-            System.out.println("You must insert your lastname");
-        }
-
-        if (userAge >= registerAge) {
-            System.out.println("valid age");
-        } else {
-            System.out.println("You must be at least 18");
-        }
-
-        if (userPassword.length() >= 6) {
-            System.out.println("Valid password");
-        } else {
-            System.out.println("Invalid password length");
-        }
-
-        while (firstName.isEmpty()) {
-            System.out.println("Insert your name again");
+        // First name input
+        String firstName;
+        do {
+            System.out.println("Enter your first name:");
             firstName = scanner.nextLine();
-        }
-        if (LastName.isEmpty()) {
-            System.out.println("Insert your lastname");
+            setName(firstName);
+
+            if (firstName.matches(regex)) {
+
+            } else {
+                System.err.println("It must be a valid first name with at least 3 letters.");
+                return;
+            }
+        } while (firstName.isEmpty());
+
+        // Last name input
+        String LastName;
+        do {
+            System.out.println("Enter your last name:");
             LastName = scanner.nextLine();
-        }
-        else if (userPassword.length() >= 6) {
-            System.out.println("Insert your password");
+            setLastName(LastName);
+
+            if (LastName.matches(regex)) {
+
+            } else {
+                System.err.println("It must be a valid last name with at least 3 letters.");
+                return;
+            }
+        } while (LastName.isEmpty());
+
+        // User age input
+        int userAge;
+        do {
+            System.out.println("Enter your age:");
+            userAge = scanner.nextInt();
+            scanner.nextLine();
+            setAge(userAge);
+
+            if (userAge < registerAge) {
+                System.out.println("You are under age. You can't register.");
+                return;
+            }
+        } while (userAge < registerAge);
+
+        // User Password input
+        String userPassword;
+        do {
+            System.out.println("Enter a password:");
             userPassword = scanner.nextLine();
+            setPassword(userPassword);
 
-        } else {
-            System.out.println();
-        }
+            if (userPassword.matches(regex)) {
 
-        System.out.println("Welcome " + firstName + " " + lastName + "\n");
-        System.out.println("Your registration is complete");
+            } else {
+                System.err.println("It must be a valid password with at least 3 letters.");
+                return;
+            }
+        } while (userPassword.isEmpty());
+
+        System.out.println("\nWelcome " + firstName.toUpperCase() +  " Your registration is complete");
     }
 }
