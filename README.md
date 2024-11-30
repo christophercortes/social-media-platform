@@ -8,13 +8,12 @@ The purpose of the software is to develop a social media platform named GreenFla
 
 My purpose in writing this software is to learn and improve the syntax and programming implementation of Java language to develop a sophisticated and secure social media platform.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
 [Software Demo Video](https://www.youtube.com/watch?v=0gO9ZvtPKaE)
 
 # Development Environment
 
-The software is developed with Java language. It uses some packages like Scanner for user inputs, ArrayList to create arrays and store data,LocalDate to retrieve local date and DateTimeFormatter to format the date to day, month, and year.
+The software is developed with Java language. It uses some packages like Scanner for user inputs, ArrayList to create arrays and store data,LocalDate to retrieve local date and DateTimeFormatter to format the date to day, month, and year. Users are allowed to add and delete followers same thing for their posts.
 
 
 # Useful Websites
