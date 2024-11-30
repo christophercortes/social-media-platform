@@ -64,9 +64,8 @@ public class Register {
 
             } else {
                 System.err.println("It must be a valid first name with at least 3 letters.");
-                return;
             }
-        } while (firstName.isEmpty());
+        } while (!firstName.matches(regex));
 
         // Last name input
         String LastName;
@@ -79,9 +78,8 @@ public class Register {
 
             } else {
                 System.err.println("It must be a valid last name with at least 3 letters.");
-                return;
             }
-        } while (LastName.isEmpty());
+        } while (!LastName.matches(regex));
 
         // User age input
         int userAge;
@@ -93,7 +91,6 @@ public class Register {
 
             if (userAge < registerAge) {
                 System.out.println("You are under age. You can't register.");
-                return;
             }
         } while (userAge < registerAge);
 
@@ -108,9 +105,8 @@ public class Register {
 
             } else {
                 System.err.println("It must be a valid password with at least 3 letters.");
-                return;
             }
-        } while (userPassword.isEmpty());
+        } while (!userPassword.matches(regex));
 
         System.out.println("\nWelcome " + firstName + "!" + " your registration is complete");
     }

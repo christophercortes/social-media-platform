@@ -1,32 +1,29 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This program is a software for a social media platform named GreenFlag. This software was developed with Java with some packages. This program uses Visual Studio Code for development and GitHub for deployment. 
 
-{Provide a description of the software that you wrote to demonstrate the Java language.}
 
-{Describe your purpose for writing this software.}
+The purpose of the software is to develop a social media platform named GreenFlag. This software applies the principle of Object-Oriented Programming skills with encapsulation to protect user-sensitive data and inheritance for reusable code. It also uses packages for user input, displays local date, and creates ArrayList to store user posts and followers.
+
+
+My purpose in writing this software is to learn and improve the syntax and programming implementation of Java language to develop a sophisticated and secure social media platform.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=0gO9ZvtPKaE)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+The software is developed with Java language. It uses some packages like Scanner for user inputs, ArrayList to create arrays and store data,LocalDate to retrieve local date and DateTimeFormatter to format the date to day, month, and year.
 
-{Describe the programming language that you used and any libraries.}
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [w3schools](https://www.w3schools.com/java/default.asp)
+- [Microsoft Learn](https://learn.microsoft.com/en-us/shows/java-for-beginners/?form=MG0AV3)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- The program issues a NoSuchElementException that must be fixed due to the implementation of scanner.close(); That line of code was commented out.
+- Add more features to the program in each method like uploading images and following friends.
+- Create log-in and log-out classes with their methods.
