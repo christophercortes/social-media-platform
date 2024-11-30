@@ -3,13 +3,17 @@ public class Main {
         //Objects
         Date dateTime = new Date();
         Welcome message = new Welcome();
-        Register user = new Register();
-        Profiles page = new Profiles();
+        //This object is not needed because
+        //it mixed with Profiles due to inheritance.
+        //Register user = new Register();
+        Profiles profile = new Profiles();
         
         //Call methods
         dateTime.displayDate();
         message.welcomeMessage();
-        user.register();
-        page.profile();
+        //profile.register(); is a combination of
+        //regitser class with profile due to inheritance.
+        profile.register();
+        profile.profile();
     }
 }

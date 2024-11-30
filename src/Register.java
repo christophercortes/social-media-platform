@@ -51,7 +51,6 @@ public class Register {
 
     // Methods
     public void register() {
-
         System.out.println("\nRegister to see photos and videos from your friends\n");
 
         // First name input
