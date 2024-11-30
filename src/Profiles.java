@@ -37,12 +37,14 @@ class Profiles extends Register {
             System.out.println("1 - Add follower");
             System.out.println("2 - Delete follower");
             System.out.println("3 - Create a post");
+            System.out.println("4 - Delete a post");
             menuSelect = scanner.nextInt();
             scanner.nextLine();
 
             if (menuSelect == 1) {
                 System.out.println("Enter a new follower:");
                 String newFollower = scanner.nextLine();
+                setFollowers(newFollower);
                 listFollowers.add(newFollower);
             }
             else if (menuSelect == 2) {
@@ -53,7 +55,12 @@ class Profiles extends Register {
             else if (menuSelect == 3) {
                 System.out.println("What's on your mind, " + getName());
                 String newPost = scanner.nextLine();
+                setPost(newPost);
                 posts.add(newPost);
+            }
+            else if (menuSelect == 4) {
+                System.out.println("Your last post was deleted.");
+                posts.remove(0);
             } else {
                 System.err.println("You must select a valid number");
             }
