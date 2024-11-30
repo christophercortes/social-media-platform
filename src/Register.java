@@ -112,6 +112,6 @@ public class Register {
             }
         } while (userPassword.isEmpty());
 
-        System.out.println("\nWelcome " + firstName +  " your registration is complete");
+        System.out.println("\nWelcome " + firstName + "!" + " your registration is complete");
     }
 }

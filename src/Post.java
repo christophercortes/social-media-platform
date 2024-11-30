@@ -2,10 +2,9 @@ import java.util.Scanner;
 
 class Post extends Profiles {
     public void post() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n@" + getName() + "." + getLastName() + " " + "post page");
 
-        System.out.println("\n@" + getName() + "." + getLastName() + " " + "post page\n");
-        System.out.println(getFollowers() + " " + getPost());
+        Scanner scanner = new Scanner(System.in);
         
         int menuPost;        
         do {
@@ -17,13 +16,13 @@ class Post extends Profiles {
 
             if (menuPost == 1) {
                 System.out.println("==========================");
-                System.out.println("My followers are:\n" + getFollowers());
+                System.out.println("Your followers are:\n" + getFollowers() + "\n");
             }
             else if (menuPost == 2) {
                 System.out.println("==========================");
-                System.out.println("My last posts are:\n" + getPost());
+                System.out.println("Your last posts are:\n" + getPost() + "\n");
             } else {
-                System.err.println("Must insert a valid number");
+                System.err.println("You must insert a valid number");
             }
         } while (menuPost != 1 && menuPost != 2);
 

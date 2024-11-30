@@ -23,12 +23,12 @@ class Profiles extends Register {
 
     public void profile() {
         System.err.println("\nGreenFlag\n");
-        System.out.println("User name: @" + getName().toLowerCase() + "." + getLastName().toLowerCase());
-
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("User name: @" + getName().toLowerCase() + "." + getLastName().toLowerCase());      
 
         ArrayList<String> listFollowers = new ArrayList<>();
         ArrayList<String> posts = new ArrayList<>();
+
+        Scanner scanner = new Scanner(System.in);
 
         int menuSelect;
 
@@ -65,7 +65,7 @@ class Profiles extends Register {
                 System.err.println("You must select a valid number");
             }
         } while (menuSelect != 1 && menuSelect != 2 && menuSelect != 3);
-        
-        scanner.close();
+
+        //scanner.close(); This is causing a NoSuchElementException
     }
 }
